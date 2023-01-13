@@ -1,0 +1,30 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    height: 100%;
+}
+
+aside {
+    background-color: lightblue;
+}
+
+header {
+    background-color: aliceblue;
+    height: 20%;
+}
+
+.main {
+    grid-row: 1fr;
+}
