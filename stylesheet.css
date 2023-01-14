@@ -10,21 +10,128 @@ html, body {
     height: 100%;
 }
 
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
 .main-wrapper {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
     height: 100%;
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     background-color: lightblue;
+    padding: 25px;
 }
 
-header {
+aside > ul {
+    font-size: 1.3rem;
+    line-height: 175%;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
     background-color: aliceblue;
     height: 20%;
+    display: flex;
+    flex-direction: column;
 }
 
-.main {
-    grid-row: 1fr;
+.nav-upper {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.nav-lower {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    grid-template-rows: 40% 1fr;
+}
+
+.projects {
+    grid-row: 1/3;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 30px;
+    padding: 30px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+}
+
+.project-cards {
+    flex: 1;
+}
+
+.card {
+    border: 1px solid black;
+}
+
+.announcements {
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.announce-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.announce-content {
+    border: 1px solid lightcoral;
+    flex: 1;
+}
+
+.trending {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.trending-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-entry {
+    flex: 1;
+    border: 1px solid lightgreen
 }
