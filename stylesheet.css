@@ -34,7 +34,8 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background-color: lightblue;
+    background-color: #3c6e71;
+    color: white;
     padding: 25px;
 }
 
@@ -52,10 +53,21 @@ aside > ul > li {
 aside > ul img {
     height: 20px;
     margin-right: 24px;
+    filter: invert(91%) sepia(92%) saturate(37%) hue-rotate(201deg) brightness(106%) contrast(100%);
+    position: relative;
+    top: 2px;
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 36px;
+    margin-right: 16px;
+    filter: invert(91%) sepia(92%) saturate(37%) hue-rotate(201deg) brightness(106%) contrast(100%);
 }
 
 .main-section {
@@ -64,10 +76,10 @@ aside > ul img {
 }
 
 nav {
-    background-color: lightgreen;
     height: 20%;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
 }
 
 .nav-upper {
@@ -83,8 +95,13 @@ nav {
     justify-content: center;
 }
 
+.search-bar label {
+    display: flex;
+    align-items: center;
+}
+
 .search-bar img {
-    height: 26px;
+    height: 28px;
     margin-right: 10px;
 }
 
@@ -98,17 +115,23 @@ nav {
     height: 28px;
     width: max(200px,60%);
     padding: 2px 10px;
-    background-color: aliceblue;
+    background-color: #d9d9d9;
+
 }
 
 .login-info {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 24px;
 }
 
 .login-info img {
     height: 22px;
+}
+
+.login-info #avatar {
+    height: 54px;
 }
 
 .nav-lower {
@@ -116,12 +139,28 @@ nav {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 0 10px;
+    margin-bottom: 10px;
 }
 
 .welcome-message {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 20px;
+    margin-left: 20px;
+    line-height: 28px;
+}
+
+.welcome-message img {
+    height: 72px;
+}
+
+.hello {
+    font-size: 0.8rem;
+}
+
+.hello-login {
+    font-size: 1.4rem;
 }
 
 .project-buttons {
@@ -129,6 +168,31 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 4%;
+}
+
+.project-buttons button {
+    align-items: center;
+    background-color: #3c6e71;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    justify-content: center;
+    height: 36px;
+    width: 90px;
+    overflow: hidden;
+    padding: 0px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    vertical-align: middle;
+}
+
+.project-buttons button:hover{ 
+    background-color: #194f52;
 }
 
 .main-content {
@@ -144,6 +208,7 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+    background-color: #d9d9d9;
 }
 
 .project-cards {
@@ -153,20 +218,29 @@ nav {
     grid-auto-rows: 250px;
     gap: 40px;
     padding: 30px;
+    padding-top: 10px;
 }
 
 .section-title {
     font-size: 1.2rem;
+    margin-top: 14px;
 }
 
 .card {
-    border: 1px solid black;
     position: relative;
     padding: 16px 22px;
+    background-color: #ffffff;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .card-content {
-    height: 162px;
+    margin-top: 12px;
+    height: 146px;
+    font-size: 0.8rem;
     overflow: auto;
 }
 
@@ -185,12 +259,14 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+    background-color: #d9d9d9;
 }
 
 .announce-card {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 .announce-content {
@@ -198,23 +274,32 @@ nav {
     flex: 1;
     display: flex;
     align-items: center;
+    background-color: #ffffff;
+    padding: 10px 16px;
 }
 
 .trending {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+    background-color: #d9d9d9;
 }
 
 .trending-card {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+}
+
+.trending-card img {
+    height: 60px;
 }
 
 .trending-entry {
     flex: 1;
-    border: 1px solid lightgreen;
     display: flex;
     align-items: center;
+    background-color: #ffffff;
+    padding: 10px 16px;
 }
